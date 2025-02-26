@@ -31,8 +31,8 @@ public class Main {
 
         // Step 5: Simulate order processing
         OrderManager orderManager = new OrderManager();
-        Order order1 = new Order("Alice", laptop.getProductId(), 2);
-        Order order2 = new Order("Bob", smartphone.getProductId(), 1);
+        Order order1 = new Order("Raghad", laptop.getProductId(), 2);
+        Order order2 = new Order("Amal", smartphone.getProductId(), 1);
 
         orderManager.placeOrder(order1);
         orderManager.placeOrder(order2);
