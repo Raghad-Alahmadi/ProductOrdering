@@ -23,24 +23,24 @@ public class OrderManager {
     }
 
 
-
     private void processOrder(Order order) {
 
-        System.out.println("Processing order: " + order);
-
         try {
-
-            Thread.sleep(5000);
+            Thread.sleep(2000);  // Simulate processing delay
+            order.setStatus(Order.OrderStatus.SHIPPED);
+            System.out.println("Order shipped: " + order);
+            Thread.sleep(2000);
+            order.setStatus(Order.OrderStatus.DELIVERED);
+            System.out.println("Order delivered: " + order);
 
         } catch (InterruptedException e) {
 
-            e.printStackTrace();
+            System.err.println("Error processing order: " + order.getOrderId());
 
         }
 
-        System.out.println("Order processed: " + order);
-
     }
+
 
 
 
