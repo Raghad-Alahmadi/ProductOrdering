@@ -1,6 +1,6 @@
 
 import java.util.UUID;
-
+// Product attributes
 public class Product {
     private UUID productId;
     private String name;
@@ -8,7 +8,7 @@ public class Product {
     private int stockLevel;
     private int reorderThreshold;
 
-
+    // Constructor
     public Product(String name, double price, int stockLevel, int reorderThreshold) {
         this.productId = UUID.randomUUID();
         this.name = name;
@@ -16,7 +16,7 @@ public class Product {
         this.stockLevel = stockLevel;
         this.reorderThreshold = reorderThreshold;
     }
-
+    // Getters
     public UUID getProductId() {
         return productId;
     }
@@ -37,10 +37,12 @@ public class Product {
         return reorderThreshold;
     }
 
+    // reduce stock level by quantity
     public void reduceStock(int quantity) {
         this.stockLevel -= quantity;
     }
 
+    //Print out the product details
     @Override
     public String toString() {
         return "Product ID: " + productId +
